@@ -468,7 +468,7 @@ let DOM = {
     if(!DOM.isTextualInput(focused)){ return }
     if(focused.value === "" || focused.readOnly){ focused.blur()}
     focused.focus()
-    if(focused.setSelectionRange && focused.type === "text" || focused.type === "textarea"){
+    if(focused.setSelectionRange && focused.type === "text" || focused.type === "textarea" || focused.type === "search"){
       focused.setSelectionRange(selectionStart, selectionEnd)
     }
   },
